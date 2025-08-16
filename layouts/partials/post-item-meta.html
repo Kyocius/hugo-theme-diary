@@ -19,4 +19,28 @@
     {{ if .Draft }}
     <span class="draft-label">{{ i18n "draft" }}</span>
     {{ end }}
+
+    <!-- Categories Start -->
+    {{ if .Params.categories }}
+    {{ if reflect.IsSlice .Params.categories }}
+    {{ range .Params.categories }}
+    <span class="post-category">{{ . }}</span>
+    {{ end }}
+    {{ else }}
+    <span class="post-category">{{ .Params.categories }}</span>
+    {{ end }}
+    {{ end }}
+    <!-- Categories End -->
+
+    <!-- Tags Start -->
+    {{ if .Params.tags }}
+    {{ if reflect.IsSlice .Params.tags }}
+    {{ range .Params.tags }}
+    <span class="post-tag">{{ . }}</span>
+    {{ end }}
+    {{ else }}
+    <span class="post-tag">{{ .Params.tags }}</span>
+    {{ end }}
+    {{ end }}
+    <!-- Tags End -->
 </div>

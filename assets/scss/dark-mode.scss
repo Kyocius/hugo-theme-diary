@@ -164,6 +164,21 @@ body.night {
             }
           }
 
+          // 暗色模式下的分类和标签样式
+          .post-item-meta {
+            .post-category {
+              color: $deep-light-accent !important;
+              background: rgba($deep-light-accent, 0.1) !important;
+              border-color: rgba($deep-light-accent, 0.4) !important;
+            }
+
+            .post-tag {
+              color: #aaa !important;
+              background: rgba(#aaa, 0.1) !important;
+              border-color: rgba(#aaa, 0.3) !important;
+            }
+          }
+
           @media screen and (max-width: $single-column-max-width) {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             background: $dark-mode-front-container-background;
@@ -174,6 +189,19 @@ body.night {
 
             * {
               color: $deep-light-accent !important;
+            }
+
+            // hover状态下保持分类和标签的特殊样式
+            .post-item-meta {
+              .post-category {
+                color: $deep-light-accent !important;
+                background: rgba($deep-light-accent, 0.15) !important;
+              }
+
+              .post-tag {
+                color: #ccc !important;
+                background: rgba(#ccc, 0.15) !important;
+              }
             }
           }
         }
